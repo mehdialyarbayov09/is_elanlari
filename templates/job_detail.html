@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ job.title }} - İşguzar.az</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 min-h-screen">
+    <!-- Navbar -->
+    <nav class="bg-blue-600 text-white shadow-md py-4 px-6 flex justify-between items-center">
+        <h1 class="text-xl font-bold">💼 İşguzar.az</h1>
+        <a href="/" class="bg-white text-blue-600 px-4 py-2 rounded-lg font-semibold hover:bg-blue-50 transition">Ana Səhifə</a>
+    </nav>
+
+    <!-- Main Container -->
+    <div class="max-w-3xl mx-auto p-6 mt-6 bg-white rounded-xl shadow-sm border border-gray-100">
+        <div class="flex justify-between items-start border-b border-gray-100 pb-4 mb-4">
+            <div>
+                <h2 class="text-3xl font-bold text-gray-800">{{ job.title }}</h2>
+                <p class="text-lg text-blue-600 font-medium mt-1">{{ job.company }} <span class="text-gray-400">•</span> <span class="text-gray-500 text-sm">{{ job.location }}</span></p>
+            </div>
+            <span class="bg-blue-50 text-blue-700 text-sm px-4 py-1.5 rounded-full font-semibold">{{ job.category }}</span>
+        </div>
+
+        <div class="mb-6">
+            <span class="inline-block bg-gray-100 text-gray-700 text-sm px-3 py-1 rounded-lg font-medium mb-4">İş Rejimi: {{ job.job_type }}</span>
+            <h3 class="text-lg font-semibold text-gray-800 mb-2">İş Təsviri və Tələblər</h3>
+            <p class="text-gray-700 whitespace-pre-line leading-relaxed bg-gray-50 p-4 rounded-xl border border-gray-100">{{ job.description }}</p>
+        </div>
+
+        <div class="border-t border-gray-100 pt-4 flex justify-between items-center">
+            <span class="text-gray-600">Əlaqə vasitəsi: <strong class="text-blue-600">{{ job.contact }}</strong></span>
+            <a href="/" class="text-gray-500 hover:text-gray-700 font-semibold text-sm">← Geri qayıt</a>
+        </div>
+    </div>
+</body>
+</html>
